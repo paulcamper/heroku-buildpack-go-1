@@ -1,8 +1,6 @@
 #!/bin/bash
 # usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
-export GOPROXY=https://pc_app:vs2qNr77yN09rQn9@pc-go-proxy.herokuapp.com/
-
 set -eo pipefail
 
 mkdir -p "$1" "$2"
