@@ -615,6 +615,12 @@ case "${TOOL}" in
         fi
         massagePkgSpecForVendor
 
+        PreBuildHook="scripts/pre-build"
+        if [ -x $PreBuildHook ]; then
+            step "Running pre-build hook: ${PreBuildHook}"
+            $PreBuildHook
+        fi
+
         installPkgs
     ;;
     glide)
